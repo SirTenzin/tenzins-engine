@@ -1,0 +1,95 @@
+<!doctype html>
+<html data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/src/js/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      mode: 'jit',
+      purge: [
+        "./src/*"
+      ],
+      content: ["./src/**/*.{html,js}"],
+      theme: {
+        extend: {},
+      },
+      plugins: [require("daisyui")],
+      daisyui: {
+        styled: true,
+        themes: true,
+        base: true,
+        utils: true,
+        logs: true,
+        rtl: false,
+        prefix: "",
+        themes: ["light", "dark", "cupcake", "bumblebee", "emerald", "corporate", "synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "lofi", "pastel", "fantasy", "wireframe", "black", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"]
+      }
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/e2a851d810.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">tenzin's engine</a>
+    </div>
+    <div class="dropdown dropdown-left pr-5">
+      <label tabindex="0" class="btn m-1">Themes</label>
+      <ul tabindex="1" class="pt-100 mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+          <ul class="m-15 pt-15 menu" tabindex="0">
+              <li><button onclick="setTheme('light')" data-set-theme="light" data-act-class="active">🌝light</button></li> 
+              <li><button onclick="setTheme('dark')" data-set-theme="dark" data-act-class="active">🌚 dark</button></li>
+              <li><button onclick="setTheme('cupcake')" data-set-theme="cupcake" data-act-class="active">🧁 cupcake</button></li>
+              <li><button onclick="setTheme('bumblebee')" data-set-theme="bumblebee" data-act-class="active">🐝 bumblebee</button></li>
+              <li><button onclick="setTheme('synthwave')" data-set-theme="synthwave" data-act-class="active" class="">🌃 synthwave</button></li>
+              <li><button onclick="setTheme('cyberpunk')" data-set-theme="cyberpunk" data-act-class="active">🤖 cyberpunk</button></li>
+              <li><button onclick="setTheme('forest')" data-set-theme="forest" data-act-class="active">🌲 forest</button></li>
+              <li><button onclick="setTheme('aqua')" data-set-theme="aqua" data-act-class="active">🐟 aqua</button></li>
+              <li><button onclick="setTheme('fantasy')" data-set-theme="fantasy" data-act-class="active">🧚‍♀️ fantasy</button></li>
+              <li><button onclick="setTheme('dracula')" data-set-theme="dracula" data-act-class="active">🧛‍♂️ dracula</button></li>
+              <li><button onclick="setTheme('night')" data-set-theme="night" data-act-class="active">🌙 Night</button></li>
+              <li><button onclick="setTheme('winter')" data-set-theme="winter" data-act-class="active">❄️ Winter</button></li>
+            </ul>
+      </ul>
+    </div>
+    <div class="flex-none gap-2">
+      <div class="form-control">
+        <input type="text" placeholder="Search" class="input input-bordered">
+      </div>
+      <div class="dropdown dropdown-end">
+        <label tabindex="1" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <i style="line-height: 40px;" class="far fa-user fa-2x"></i>
+          </div>
+        </label>
+        <ul tabindex="2" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+          <li>
+            <a class="justify-between">
+              Profile
+              <span class="badge">New</span>
+            </a>
+          </li>
+          <li><a>Settings</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">Welcome to tenzin's search engine!</h1>
+        <p class="py-6">On this website, you can look for many popular eCommerce stores whether they are on Sellix, ATShop or even Shopify! Well, What are you waiting for?</p>
+        <button class="btn btn-primary">Search now!</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
